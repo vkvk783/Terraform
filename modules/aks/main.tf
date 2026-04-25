@@ -42,7 +42,7 @@ resource "azurerm_kubernetes_cluster" "main" {
   azure_policy_enabled              = true
   role_based_access_control_enabled = true
 
-  lifecycle { prevent_destroy = true }
+  lifecycle { prevent_destroy = false }
 }
 
 resource "azurerm_role_assignment" "acr_pull" {
